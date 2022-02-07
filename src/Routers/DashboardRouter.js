@@ -4,11 +4,13 @@ import { Dc } from '../Pages/Dc';
 import { Heroe } from '../Pages/Heroe';
 import { Marvel } from '../Pages/Marvel';
 import { Search } from '../Pages/Search';
+import { Navbar } from '../Components/Navbar';
 
 export const DashboardRouter = () => {
     return (
 
         <>
+            <Navbar/>
             <Routes>
                 <Route path='/marvel' element={<Marvel/>} />
                 <Route path='/dc' element={<Dc/>} />
