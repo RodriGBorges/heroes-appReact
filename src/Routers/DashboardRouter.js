@@ -11,17 +11,19 @@ export const DashboardRouter = () => {
 
         <>
             <Navbar/>
-            <Routes>
-                <Route path='/marvel' element={<Marvel/>} />
-                <Route path='/dc' element={<Dc/>} />
-                <Route path='/search' element={<Search/>} />
-                <Route path='/heroe/:id' element={<Heroe/>} />
-                <Route path="*" element={
-                        <main style={{ padding: "1rem" }}>
-                            <p>Nada por aquí!</p>
-                        </main>}
-                    />
-            </Routes>
+            <div className="mt-3">
+                <Routes>
+                    <Route path='/marvel' element={<Marvel/>} />
+                    <Route path='/dc' element={<Dc/>} />
+                    <Route path='/search' element={<Search/>} />
+                    <Route path='/heroe/:id' element={<Heroe/>} />
+                    <Route path="*" element={
+                            <main style={{ padding: "1rem" }}>
+                                <p>Nada por aquí!</p>
+                            </main>}
+                        />
+                </Routes>
+            </div>
         </>
 
     );
