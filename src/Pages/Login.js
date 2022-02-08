@@ -20,7 +20,7 @@ export const Login = () => {
         })
 
         navigate('/')
-        //o -1 -2 para volver páginas atras
+        //o -1 -2 para volver páginas atras (buscar documentacion)
 
     }
 
