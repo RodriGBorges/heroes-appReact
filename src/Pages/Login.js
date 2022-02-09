@@ -7,8 +7,10 @@ export const Login = () => {
     
     const {dispatch} = useContext(AuthContext);
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     //cuando se logee, automaticamente te devuelve a la pagina anterior. 
+
+    const lastPath = localStorage.getItem('lastPath') || '/'
 
     const handleLogin = () => {
 
@@ -19,7 +21,10 @@ export const Login = () => {
             }
         })
 
-        navigate('/')
+        navigate(lastPath)
+        //vuelve a la misma ruta que estaba cuando se logea 
+
+        /* navigate('/') */
         //o -1 -2 para volver páginas atras (buscar documentacion)
 
     }

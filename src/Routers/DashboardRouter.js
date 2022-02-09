@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { Dc } from '../Pages/Dc';
 import { Heroe } from '../Pages/Heroe';
 import { Marvel } from '../Pages/Marvel';
@@ -7,6 +7,11 @@ import { Search } from '../Pages/Search';
 import { Navbar } from '../Components/Navbar';
 
 export const DashboardRouter = () => {
+
+    const { pathname } = useLocation()
+
+    localStorage.setItem('lastPath', pathname)
+
     return (
 
         <>
