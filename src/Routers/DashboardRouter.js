@@ -21,7 +21,7 @@ export const DashboardRouter = () => {
                     <Route path='/marvel' element={<Marvel/>} />
                     <Route path='/dc' element={<Dc/>} />
                     <Route path='/search' element={<Search/>} />
-                    <Route path='/heroe/:id' element={<Heroe/>} />
+                    <Route path='/heroe/:heroeId' element={<Heroe/>} />
                     <Route path="*" element={
                             <main style={{ padding: "1rem" }}>
                                 <p>Nada por aquí!</p>
