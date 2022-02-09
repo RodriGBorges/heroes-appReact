@@ -35,7 +35,7 @@ export const Search = () => {
                 <form onSubmit={handleSearch}>
                     <input 
                     type="text"
-                    placeholder="Buscá tu héroe"
+                    placeholder="Buscá un héroe"
                     className="form-control"
                     name="keyword"
                     value={keyword}
@@ -50,7 +50,7 @@ export const Search = () => {
                     {
                         searchParams.get('keyword') === "" && 
                         <div className="alert alert-info">
-                            Buscar héroe
+                            Buscá un Héroe
                         </div>
                     }
                     {
