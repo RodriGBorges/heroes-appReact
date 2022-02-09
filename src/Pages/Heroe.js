@@ -1,5 +1,5 @@
-import React from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import React, { useMemo } from 'react';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import { getHeroeById } from '../Selectors/getHeroeById';
 
 export const Heroe = () => {
@@ -10,7 +10,12 @@ export const Heroe = () => {
     const navigate = useNavigate()
     // otra forma de volver atrás en vez de hacer un evento onClick
 
-    const heroe = getHeroeById(heroeId);
+    const heroe = useMemo(() => getHeroeById(heroeId), [heroeId]);
+
+    if(!heroe) {
+        return <Navigate to="/"/>
+    }
+
     const { superhero, publisher, alter_ego, first_appearance, characters } = heroe;
 
 
